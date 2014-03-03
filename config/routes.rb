@@ -1,6 +1,14 @@
 CrossfitMngmt::Application.routes.draw do
   resources :users
 
+  get "boxes/new"
+
+  post "boxes", to: 'boxes#create'
+
+  get 'welcome/:test', to: 'welcome#hello'
+
+  root to: 'welcome#hello'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
