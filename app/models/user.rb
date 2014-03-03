@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 
+has_many :registrations
 has_many :boxes, through: :registrations
 
 def combined_info
